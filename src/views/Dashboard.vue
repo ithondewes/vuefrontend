@@ -39,10 +39,11 @@ onMounted(() => {
     chartDataPatrimonio.value = setChartDataPatrimonio();
     chartOptions.value = setChartOptions();
 
-    axios.get("https://run.mocky.io/v3/d4a79840-93c0-4297-80bb-108c279377a3")
+    axios.get("https://run.mocky.io/v3/4eb5c95a-0e72-49f8-acee-e1a0b18aa33f")
     .then((res) => {
         const data = res.data.data.advisor_summary;
         clienteCount.value = data.client_count;
+        console.log(clienteCount.value);
         patrimonioCustodia.value = formatCurrency(data.total_equity);
         patrimonioMedio.value = formatCurrency(data.average_equity);
         equityHistory.value = data.equity_history.map(entry => ({
