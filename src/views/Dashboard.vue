@@ -39,7 +39,7 @@ onMounted(() => {
     chartDataPatrimonio.value = setChartDataPatrimonio();
     chartOptions.value = setChartOptions();
 
-    axios.get("https://run.mocky.io/v3/4eb5c95a-0e72-49f8-acee-e1a0b18aa33f")
+    axios.get("https://run.mocky.io/v3/33e160ab-a263-45cd-867d-622e9bb7ef78")
     .then((res) => {
         const data = res.data.data.advisor_summary;
         clienteCount.value = data.client_count;
